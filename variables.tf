@@ -39,3 +39,14 @@ variable "aws_amis" {
     "us-east-2" = "ami-09040d770ffe2224f"
   }
 }
+
+
+# Add your variable declarations here
+
+
+
+variable "allowed_ip_range" {
+  description = "The IP range that is allowed to access port 8080"
+  type        = string
+  default     = "10.1.0.0/16"
+}

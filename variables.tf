@@ -30,3 +30,23 @@ variable "user_department" {
   description = "The organization the user belongs to: dev, prod, qa"
   default     = "learn"
 }
+
+variable "aws_amis" {
+  type = map
+  default = {
+    "us-east-1" = "ami-04b70fa74e45c3917"
+    "us-west-2" = "ami-08012c0a9ee8e21c4"
+    "us-east-2" = "ami-09040d770ffe2224f"
+  }
+}
+
+
+# Add your variable declarations here
+
+
+
+variable "allowed_ip_range" {
+  description = "The IP range that is allowed to access port 8080"
+  type        = string
+  default     = "10.1.0.0/16"
+}
